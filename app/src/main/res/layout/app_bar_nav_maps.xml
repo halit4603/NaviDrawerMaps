@@ -29,8 +29,6 @@
         android:layout_height="match_parent"
         tools:context="io.droidmarvin.navidrawermaps.MapsActivity" />
 
-    <include layout="@layout/content_nav_maps" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
