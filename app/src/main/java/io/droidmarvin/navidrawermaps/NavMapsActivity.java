@@ -1,10 +1,13 @@
 package io.droidmarvin.navidrawermaps;
 
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,10 +20,13 @@ import android.view.MenuItem;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class NavMapsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback, LocationListener {
@@ -152,6 +158,34 @@ public class NavMapsActivity extends AppCompatActivity
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in dkut and move the camera
+        LatLng dkut = new LatLng(-0.419123,36.948738);
+        mMap.addMarker(new MarkerOptions()
+                .position(dkut)
+                .title("dkut: 0.3955843,36.962167 "));
+
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dkut));
+
+
+        // Add a marker in kings and move the camera
+        LatLng kings = new LatLng(-0.419105,36.946738);
+        mMap.addMarker(new MarkerOptions()
+                .position(kings)
+                .title("kings: -0.419105,36.946738 "));
+
+
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(NavMapsActivity.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+            mMap.setMyLocationEnabled(true);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+//            buildGoogleApiClient();
+            mMap.setMyLocationEnabled(true);
+            // mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        }
 
     }
 }
