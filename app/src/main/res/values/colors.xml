@@ -13,6 +13,9 @@
     <color name="endtblue">#0bcce6</color>
     <color name="blue">#05c3f9</color>
     <color name="green">#00bfa5</color>
+    <color name="greenO">#009688</color>
+    <color name="greenH">#00695C</color>
+    <color name="greenB">#4DB6AC</color>
     <color name="darkblue">#23283a</color>
     <color name="testcolorblue">#152b38</color>
     <color name="pink">#fe104d</color>
