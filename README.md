@@ -8,6 +8,15 @@ This guide explains how to setup a basic material design style drawer filled wit
 
 It also has a Map activity in ints main Layout
 
+Images
+-----
+
 Setup
 -----
 - Make sure to setup the Google Design Support Library before using Google's new NavigationView
+
+References
+---------
+- http://android-developers.blogspot.com/2014/10/appcompat-v21-material-design-for-pre.html
+- http://stackoverflow.com/questions/26440879/how-do-i-use-drawerlayout-to-display-over-the-actionbar-toolbar-and-under-the-st
+- http://antonioleiva.com/navigation-view/
