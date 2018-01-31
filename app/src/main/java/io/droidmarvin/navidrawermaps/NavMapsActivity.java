@@ -15,8 +15,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.Marker;
 
 public class NavMapsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback, LocationListener {
@@ -24,6 +27,20 @@ public class NavMapsActivity extends AppCompatActivity
 //
 //        extends AppCompatActivity
 //        implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private GoogleMap mMap;
+
+    private SupportMapFragment mapFragment;
+    private final static int MY_PERMISSIONS_FINE_LOCATION = 101;
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+
+    LocationRequest nLocationRequest;
+    GoogleApiClient nGoogleApiClient;
+    Location nLastLocation;
+    Marker mCurrLocationMarker;
+
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
