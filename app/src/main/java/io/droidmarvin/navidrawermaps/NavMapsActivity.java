@@ -147,10 +147,10 @@ public class NavMapsActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-//            Intent intent = new Intent(NavMapsActivity.this, ImportActivity.class);
-//            startActivity(intent);
-//            finish();
-//
+            Intent intent = new Intent(NavMapsActivity.this, ImportActivity.class);
+            startActivity(intent);
+            finish();
+
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
