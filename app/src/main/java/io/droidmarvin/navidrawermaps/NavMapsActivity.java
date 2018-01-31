@@ -153,6 +153,9 @@ public class NavMapsActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_gallery) {
 
+            Intent intent = new Intent(this, GalleryActivity.class);
+            startActivity(intent);
+            finish();
 //            menuFragment = MenuFragment.newInstance("Menu 2");
 
         } else if (id == R.id.nav_slideshow) {
