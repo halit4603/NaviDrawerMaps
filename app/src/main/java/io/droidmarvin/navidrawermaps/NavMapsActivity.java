@@ -165,7 +165,6 @@ public class NavMapsActivity extends AppCompatActivity
                 .position(dkut)
                 .title("dkut: 0.3955843,36.962167 "));
 
-
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dkut));
 
 
@@ -187,4 +186,16 @@ public class NavMapsActivity extends AppCompatActivity
         }
 
     }
+//
+//    protected void loadMap(GoogleMap googleMap) {
+//        if (googleMap != null) {
+//            // Attach marker click listener to the map here
+//            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+//                public boolean onMarkerClick(Marker marker) {
+//                    // Handle marker click here
+//                }
+//            });
+//
+//        }
+//    }
 }
