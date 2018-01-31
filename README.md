@@ -11,6 +11,8 @@ It also has a Map activity in ints main Layout
 Images
 -----
 
+<img src="images/floorLite.png" alt="phone image" width="200px" />
+
 Setup
 -----
 - Make sure to setup the Google Design Support Library before using Google's new NavigationView
