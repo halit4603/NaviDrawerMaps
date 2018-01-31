@@ -11,7 +11,8 @@ It also has a Map activity in ints main Layout
 Images
 -----
 
-<img src="images/floorLite.png" alt="phone image" width="200px" />
+<img src="images/map.png" alt="phone image" width="200px" />
+<img src="images/drawer.png" alt="phone image" width="200px" />
 
 Setup
 -----
